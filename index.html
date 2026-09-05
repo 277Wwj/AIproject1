@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>面试教练 | AI Interview Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✳</span><span>面试教练</span></div>
+      <div class="profile-mini"><div class="avatar">L</div><div><strong>林默</strong><span>求职中 · AI 应用方向</span></div><button class="icon-button" aria-label="设置">•••</button></div>
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span>总览</button>
+        <button class="nav-item" data-view="practice"><span class="nav-icon">◎</span>开始练习<span class="nav-badge">3</span></button>
+        <button class="nav-item" data-view="history"><span class="nav-icon">◷</span>练习记录</button>
+        <button class="nav-item" data-view="growth"><span class="nav-icon">↗</span>能力成长</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="streak-card"><div><span class="eyebrow">连续练习</span><strong>7 <small>天</small></strong></div><span class="streak-icon">♨</span><div class="streak-dots"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="today"></i></div></div><div class="sidebar-note"><span>本周目标</span><strong>4 / 5 场</strong><div class="progress"><i style="width:80%"></i></div></div></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb"><span>工作台</span><b>/</b><strong id="page-title">今日总览</strong></div><div class="top-actions"><button class="text-button" id="help-btn">？ 帮助</button><button class="notification" aria-label="通知">♢<i></i></button><div class="avatar avatar-small">L</div></div></header>
+
+      <section class="view active" id="dashboard-view">
+        <div class="page-intro"><div><span class="eyebrow accent">SATURDAY · 09.05.2026</span><h1>早上好，林默<span class="wave">✦</span></h1><p>今天也向理想的 offer 靠近一点。</p></div><button class="primary-button" id="start-hero"><span>＋</span> 开始一次练习</button></div>
+        <div class="stats-grid"><article class="stat-card"><div class="stat-top"><span>总练习场次</span><span class="stat-symbol blue">◌</span></div><strong>24</strong><div class="stat-foot up">↗ <b>12%</b> <span>较上月</span></div></article><article class="stat-card"><div class="stat-top"><span>平均表现分</span><span class="stat-symbol coral">◒</span></div><strong>78<span class="unit">/100</span></strong><div class="stat-foot up">↗ <b>6.4%</b> <span>较上月</span></div></article><article class="stat-card"><div class="stat-top"><span>已解锁能力</span><span class="stat-symbol yellow">✣</span></div><strong>8<span class="unit">/12</span></strong><div class="stat-foot neutral">还有 4 项待提升</div></article><article class="stat-card"><div class="stat-top"><span>累计练习时长</span><span class="stat-symbol green">◷</span></div><strong>6.8<span class="unit">h</span></strong><div class="stat-foot neutral">本周增加 42 分钟</div></article></div>
+        <div class="dashboard-grid"><section class="panel focus-panel"><div class="panel-header"><div><span class="eyebrow">NEXT UP</span><h2>推荐练习</h2></div><button class="link-button" data-view-target="practice">查看全部 →</button></div><div class="recommendation"><div class="rec-visual"><div class="sparkle">✦</div><div class="rec-orbit"></div><div class="rec-label">AI</div></div><div class="rec-body"><div class="tag-row"><span class="tag coral-tag">高频考点</span><span class="muted">预计 12 分钟</span></div><h3>系统设计：构建一个 AI Agent</h3><p>根据你的目标岗位，深入练习 Agent 架构、工具调用与可靠性设计。</p><button class="dark-button" id="start-recommended">立即开始 <span>→</span></button></div></div></section><section class="panel activity-panel"><div class="panel-header"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>最近动态</h2></div><button class="link-button" data-view-target="history">全部记录 →</button></div><div class="activity-list"><div class="activity-item"><div class="activity-icon cyan">◒</div><div><strong>产品思维 · 用户画像</strong><span>今天 09:42 · 面试表现 <b>82</b></span></div><span class="activity-arrow">→</span></div><div class="activity-item"><div class="activity-icon yellow-bg">✦</div><div><strong>行为面试 · 项目复盘</strong><span>昨天 20:18 · 面试表现 <b>76</b></span></div><span class="activity-arrow">→</span></div><div class="activity-item"><div class="activity-icon pink">◌</div><div><strong>技术面试 · RAG 基础</strong><span>09月03日 · 面试表现 <b>71</b></span></div><span class="activity-arrow">→</span></div></div></section></div>
+        <section class="panel insight-panel"><div class="insight-mark">✦</div><div><span class="eyebrow">COACH'S INSIGHT</span><h3>你的表达很有结构，下一步可以更大胆地量化结果。</h3><p>在最近 5 次回答中，你清晰描述了过程，但只有 2 次提到了具体业务指标。试着用「结果 + 影响」收尾，记忆点会更强。</p></div><button class="round-arrow">↗</button></section>
+      </section>
+
+      <section class="view" id="practice-view"><div class="page-intro compact"><div><span class="eyebrow accent">PRACTICE LIBRARY</span><h1>挑一个场景，开始练习</h1><p>AI 会根据你的回答给出即时反馈。</p></div></div><div class="practice-grid"><button class="practice-card featured" data-practice="system"><span class="card-kicker">TECHNICAL · 12 MIN</span><div class="practice-art">✦</div><h2>系统设计</h2><p>从 0 到 1 设计一个 AI Agent，展示你的架构思维。</p><span class="card-cta">开始练习 →</span></button><button class="practice-card" data-practice="behavior"><span class="card-kicker">BEHAVIORAL · 8 MIN</span><div class="practice-art coral-art">◒</div><h2>行为面试</h2><p>用 STAR 方法，把项目经历讲得更有说服力。</p><span class="card-cta">开始练习 →</span></button><button class="practice-card" data-practice="product"><span class="card-kicker">PRODUCT · 10 MIN</span><div class="practice-art yellow-art">⌁</div><h2>产品思维</h2><p>练习用户洞察、优先级判断与产品决策。</p><span class="card-cta">开始练习 →</span></button></div></section>
+
+      <section class="view" id="history-view"><div class="page-intro compact"><div><span class="eyebrow accent">YOUR JOURNEY</span><h1>练习记录</h1><p>每一次练习，都会让你更接近理想的自己。</p></div><button class="outline-button" id="export-btn">↓ 导出报告</button></div><div class="panel table-panel"><div class="history-head"><span>练习主题</span><span>日期</span><span>表现分</span><span>状态</span></div><div class="history-row"><strong>产品思维 · 用户画像</strong><span>今天 09:42</span><b class="score good">82</b><span class="status">已完成</span></div><div class="history-row"><strong>行为面试 · 项目复盘</strong><span>昨天 20:18</span><b class="score">76</b><span class="status">已完成</span></div><div class="history-row"><strong>技术面试 · RAG 基础</strong><span>09月03日</span><b class="score">71</b><span class="status">已完成</span></div><div class="history-row"><strong>系统设计 · AI Agent</strong><span>09月01日</span><b class="score">83</b><span class="status">已完成</span></div></div></section>
+
+      <section class="view" id="growth-view"><div class="page-intro compact"><div><span class="eyebrow accent">SKILL MAP</span><h1>能力成长</h1><p>你正在成为一个更完整的 AI 产品人才。</p></div></div><div class="growth-layout"><section class="panel radar-panel"><div class="panel-header"><div><span class="eyebrow">CURRENT LEVEL</span><h2>能力雷达</h2></div><span class="level-pill">Lv. 4 · 进阶</span></div><div class="radar"><div class="radar-shape"></div><div class="radar-shape inner"></div><div class="radar-line one"></div><div class="radar-line two"></div><div class="radar-line three"></div><span class="radar-label top">表达力</span><span class="radar-label right">产品思维</span><span class="radar-label bottom-right">技术深度</span><span class="radar-label bottom-left">结构化</span><span class="radar-label left">用户洞察</span></div></section><section class="panel skills-panel"><div class="panel-header"><div><span class="eyebrow">SKILLS</span><h2>能力详情</h2></div></div><div class="skill"><div><strong>结构化表达</strong><span>已解锁 · 92%</span></div><div class="skill-bar"><i style="width:92%"></i></div></div><div class="skill"><div><strong>产品思维</strong><span>已解锁 · 84%</span></div><div class="skill-bar"><i style="width:84%"></i></div></div><div class="skill"><div><strong>技术深度</strong><span>持续提升 · 68%</span></div><div class="skill-bar"><i style="width:68%"></i></div></div><div class="skill"><div><strong>量化意识</strong><span>待解锁 · 45%</span></div><div class="skill-bar"><i style="width:45%"></i></div></div></section></div></section>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="practice-modal"><div class="practice-modal"><button class="close-modal" id="close-modal">×</button><div class="modal-progress"><span id="question-count">QUESTION 01 / 03</span><div><i id="modal-progress-bar"></i></div></div><span class="eyebrow accent">AI INTERVIEW COACH</span><h2 id="question-title">我们开始吧。</h2><p id="question-text">请用 2 分钟，向面试官介绍一个你最近参与的、最有挑战的 AI 项目。重点说说你的具体贡献。</p><div class="answer-box"><textarea id="answer-input" placeholder="输入你的回答，尽量具体一些……"></textarea><div class="answer-tools"><span>⌘ Enter 提交回答</span><button class="submit-answer" id="submit-answer">提交回答 <span>→</span></button></div></div><div class="ai-feedback" id="ai-feedback"><div class="feedback-icon">✦</div><div><strong>教练反馈</strong><p id="feedback-text"></p></div></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
